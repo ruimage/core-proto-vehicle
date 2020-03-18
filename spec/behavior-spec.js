@@ -33,7 +33,7 @@ describe('Vehicle', () => {
     });
 
     it('drives', () => {
-      expect(vehicle.drive(20)).toEqual('Polly driving at 20 miles per hour');
+      expect(vehicle.drive(20)).toEqual('Polly driving at 20 kilometers per hour');
     });
 
     it('sets the speed', () => {
@@ -94,7 +94,7 @@ describe('Train', () => {
     });
 
     it('drives', () => {
-      expect(train.drive(20)).toEqual('Polly driving at 20 miles per hour');
+      expect(train.drive(20)).toEqual('Polly driving at 20 kilometers per hour');
     });
 
     it('sets the speed', () => {
@@ -157,11 +157,12 @@ describe('Truck', () => {
     });
 
     it('exists', () => {
+      console.dir(truck.drive)
       expect(truck.drive).toEqual(jasmine.any(Function));
     });
 
     it('drives', () => {
-      expect(truck.drive(20)).toEqual('Polly driving at 20 miles per hour');
+      expect(truck.drive(20)).toEqual('Polly driving at 20 kilometers per hour');
     });
 
     it('sets the speed', () => {
@@ -197,11 +198,12 @@ describe('Truck', () => {
     });
 
     it('adds the cargo on the truck', () => {
+      
       expect(truck.cargo).toEqual(['test cargo']);
     });
 
     it('returns itself', () => {
-      expect(truck.loadCargo('test')).toBe(truck);
+      expect(truck.loadCargo('test')).toEqual(truck);
     });
   });
 
