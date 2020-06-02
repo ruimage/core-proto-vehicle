@@ -1,65 +1,68 @@
-describe('Vehicle prototype', () => {
-  it('has a drive method', () => {
+//
+// Проверка корректности прототипов и наследования
+//
+describe('Прототип Vehicle', () => {
+  it('имеет метод drive', () => {
     expect(Vehicle.prototype.drive).toEqual(jasmine.any(Function));
   });
 });
 
-describe('Train', () => {
-  describe('prototype constructor', () => {
+describe('Прототип поезда/Train', () => {
+  describe('имеет свой constructor', () => {
     it('is Train', () => {
       expect(Train.prototype.constructor).toEqual(Train);
     });
   });
 
-  describe('.drive()', () => {
+  describe('метод .drive', () => {
     let train;
     beforeEach(() => {
       train = new Train('test');
     });
 
-    it('is the same function as Vehicle.prototype.drive', () => {
+    it('наследует функцию прототипа Vehicle', () => {
       expect(train.drive).toBe(Vehicle.prototype.drive);
     });
   });
 });
 
-describe('Truck', () => {
-  describe('prototype constructor', () => {
+describe('Грузовик/Truck', () => {
+  describe('имеет свой constructor', () => {
     it('is Truck', () => {
       expect(Truck.prototype.constructor).toEqual(Truck);
     });
   });
 
-  describe('.drive()', () => {
+  describe('метод .drive', () => {
     let truck;
     beforeEach(() => {
       truck = new Truck('test');
     });
 
-    it('is the same function as Vehicle.prototype.drive', () => {
+    it('наследует функцию прототипа Vehicle.prototype.drive', () => {
       expect(truck.drive).toBe(Vehicle.prototype.drive);
     });
   });
 
-  describe('.loadCargo()', () => {
+  describe('метод .loadCargo', () => {
     let truck;
     beforeEach(() => {
       truck = new Truck('test');
     });
 
-    it('is on the prototype', () => {
+    it('есть в прототипе', () => {
       expect(Truck.prototype.loadCargo).toEqual(jasmine.any(Function));
       expect(truck.loadCargo).toBe(Truck.prototype.loadCargo);
     });
   });
 
-  describe('.unloadCargo()', () => {
+  describe('метод .unloadCargo', () => {
     let truck;
     beforeEach(() => {
       truck = new Truck('test');
     });
 
-    it('is on the prototype', () => {
+    it('есть в прототипе', () => {
       expect(Truck.prototype.unloadCargo).toEqual(jasmine.any(Function));
       expect(truck.unloadCargo).toBe(Truck.prototype.unloadCargo);
     });

@@ -1,4 +1,6 @@
-// Behavioral specs.
+//
+// Проверка корректности работы конструкторов и методов
+//
 describe('Транспорт/Vehicle', () => {
   describe('чек constructor`а', () => {
     it('constructor Vehicle является функцией?', () => {
