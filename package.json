@@ -4,6 +4,7 @@
   "description": "",
   "main": "train-or-truck.js",
   "scripts": {
+    "lint": "eslint train-or-truck.js",
     "test": "npx jasmine --random=false --reporter=jasmine-console-reporter spec/*.js"
   },
   "repository": {
@@ -20,7 +21,7 @@
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-import": "^2.20.2",
     "jasmine": "^3.5.0",
     "jasmine-console-reporter": "^3.1.0"
   }
