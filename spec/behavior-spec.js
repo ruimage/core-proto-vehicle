@@ -1,48 +1,48 @@
 // Behavioral specs.
-describe('Vehicle', () => {
-  describe('the constructor', () => {
-    it('is a function', () => {
+describe('Транспорт/Vehicle', () => {
+  describe('чек constructor`а', () => {
+    it('constructor Vehicle является функцией?', () => {
       expect(Vehicle).toEqual(jasmine.any(Function));
     });
 
-    describe('when called', () => {
+    describe('при вызове конструктора', () => {
       let vehicle;
       beforeEach(() => {
         vehicle = new Vehicle('Polly');
       });
 
-      it('sets the driver', () => {
+      it('устанавливается ли driver', () => {
         expect(vehicle.driver).toEqual('Polly');
       });
 
-      it('sets the initial speed', () => {
+      it('устанавливается ли speed', () => {
         expect(vehicle.speed).toEqual(0);
       });
     });
   });
 
-  describe('.drive()', () => {
+  describe('проверка метода .drive()', () => {
     let vehicle;
 
     beforeEach(() => {
       vehicle = new Vehicle('Polly');
     });
 
-    it('exists', () => {
+    it('являеется функцией', () => {
       expect(vehicle.drive).toEqual(jasmine.any(Function));
     });
 
-    it('drives', () => {
+    it('drive возвращает корректный текст с какой скоростью движется водитель', () => {
       expect(vehicle.drive(20)).toEqual('Polly driving at 20 kilometers per hour');
     });
 
-    it('sets the speed', () => {
+    it('можно ли установить скорость с которой едете транспорт', () => {
       vehicle.drive(45);
       expect(vehicle.speed).toEqual(45);
     });
   });
 
-  describe('.stop()', () => {
+  describe('проверка метода .stop()', () => {
     let vehicle;
 
     beforeEach(() => {
@@ -50,60 +50,60 @@ describe('Vehicle', () => {
       vehicle.drive(100);
     });
 
-    it('exists', () => {
+    it('являеется функцией', () => {
       expect(vehicle.stop).toEqual(jasmine.any(Function));
     });
 
-    it('stops', () => {
+    it('выдает корректный текст и сбрасвает скорость', () => {
       expect(vehicle.stop()).toEqual('Polly has stopped');
       expect(vehicle.speed).toEqual(0);
     });
   });
 });
 
-describe('Train', () => {
-  describe('the constructor', () => {
-    it('is a function', () => {
+describe('Поезд/Train', () => {
+  describe('конструктор', () => {
+    it('существует и являяется функцией', () => {
       expect(Train).toEqual(jasmine.any(Function));
     });
 
-    describe('when called', () => {
+    describe('создание нового экземпляра', () => {
       let train;
       beforeEach(() => {
         train = new Train('Polly');
       });
 
-      it('sets the driver', () => {
+      it('устанавливает водителя', () => {
         expect(train.driver).toEqual('Polly');
       });
 
-      it('sets the initial speed', () => {
+      it('устанавливает начальную скорость', () => {
         expect(train.speed).toEqual(0);
       });
     });
   });
 
-  describe('.drive()', () => {
+  describe('метод .drive()', () => {
     let train;
     beforeEach(() => {
       train = new Train('Polly');
     });
 
-    it('exists', () => {
+    it('метода/функция существует', () => {
       expect(train.drive).toEqual(jasmine.any(Function));
     });
 
-    it('drives', () => {
+    it('drive возвращает корректный текст', () => {
       expect(train.drive(20)).toEqual('Polly driving at 20 kilometers per hour');
     });
 
-    it('sets the speed', () => {
+    it('скорость корректно устанавливается', () => {
       train.drive(45);
       expect(train.speed).toEqual(45);
     });
   });
 
-  describe('.stop()', () => {
+  describe('метод .stop()', () => {
     let train;
 
     beforeEach(() => {
@@ -111,11 +111,11 @@ describe('Train', () => {
       train.drive(100);
     });
 
-    it('exists', () => {
+    it('метод существует', () => {
       expect(train.stop).toEqual(jasmine.any(Function));
     });
 
-    it('stops', () => {
+    it('сбрасывает скорость и возвращет текст', () => {
       expect(train.stop()).toEqual('Polly has stopped');
       expect(train.speed).toEqual(0);
     });
@@ -123,55 +123,54 @@ describe('Train', () => {
 });
 
 
-describe('Truck', () => {
-  describe('the constructor', () => {
-    it('is a function', () => {
+describe('Грузовки/Truck', () => {
+  describe('constructor', () => {
+    it('является функцией', () => {
       expect(Truck).toEqual(jasmine.any(Function));
     });
 
-    describe('when called', () => {
+    describe('при вызове', () => {
       let truck;
       beforeEach(() => {
         truck = new Truck('Polly');
       });
 
-      it('sets the driver', () => {
+      it('устанавливает водителя', () => {
         expect(truck.driver).toEqual('Polly');
       });
 
-      it('sets the initial speed', () => {
+      it('устанавливает начальную скорость', () => {
         expect(truck.speed).toEqual(0);
       });
 
-      it('sets the initial cargo load', () => {
+      it('устанавливает значение по-умолчанию для груза/cargo ', () => {
         expect(truck.cargo).toEqual([]);
       });
     });
   });
 
-  describe('.drive()', () => {
+  describe('метод .drive()', () => {
     let truck;
 
     beforeEach(() => {
       truck = new Truck('Polly');
     });
 
-    it('exists', () => {
-      console.dir(truck.drive)
+    it('метод существует', () => {
       expect(truck.drive).toEqual(jasmine.any(Function));
     });
 
-    it('drives', () => {
+    it('выдает корректный текст', () => {
       expect(truck.drive(20)).toEqual('Polly driving at 20 kilometers per hour');
     });
 
-    it('sets the speed', () => {
+    it('устанавливает скорость', () => {
       truck.drive(45);
       expect(truck.speed).toEqual(45);
     });
   });
 
-  describe('.stop()', () => {
+  describe('метод .stop()', () => {
     let truck;
 
     beforeEach(() => {
@@ -189,7 +188,7 @@ describe('Truck', () => {
     });
   });
 
-  describe('.loadCargo()', () => {
+  describe('метод погрузки груза', () => {
     let truck;
 
     beforeEach(() => {
@@ -197,17 +196,16 @@ describe('Truck', () => {
       truck.loadCargo('test cargo');
     });
 
-    it('adds the cargo on the truck', () => {
-      
+    it('проверка что груз соответствует загруженному', () => {
       expect(truck.cargo).toEqual(['test cargo']);
     });
 
-    it('returns itself', () => {
+    it('метод погрузки должен возвращать экземпляр прототипа грузовика/truck', () => {
       expect(truck.loadCargo('test')).toEqual(truck);
     });
   });
 
-  describe('.unloadCargo()', () => {
+  describe('метод разгрузки груза', () => {
     let truck;
     let unloadedCargo;
     beforeEach(() => {
@@ -216,11 +214,11 @@ describe('Truck', () => {
       unloadedCargo = truck.unloadCargo();
     });
 
-    it('returns the latest cargo', () => {
+    it('возвращает извлеченный груз', () => {
       expect(unloadedCargo).toEqual('cargo 2');
     });
 
-    it('reduces the cargo load by 1', () => {
+    it('выдает корректное количество загруженных единиц ', () => {
       expect(truck.cargo.length).toEqual(1);
     });
   });
