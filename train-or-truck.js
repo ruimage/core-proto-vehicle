@@ -39,3 +39,6 @@ function Truck(driver) {
 Truck.prototype.unloadCargo = function () {
   return this.cargo;
 };
+
+
+module.exports = { Vehicle, Train, Truck };

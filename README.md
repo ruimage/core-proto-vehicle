@@ -33,4 +33,6 @@ function Vehicle(driver) {
 Тебе надо сделать наследование. Определись что должно быть в `prototype`, каким должен быть `constuctor`.
 
 > p.s. загляни в тесты
-
+```bash
+npm test
+```

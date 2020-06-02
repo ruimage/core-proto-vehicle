@@ -1,3 +1,5 @@
+const { Vehicle, Train, Truck } = require('../train-or-truck.js');
+
 //
 // Проверка корректности прототипов и наследования
 //
