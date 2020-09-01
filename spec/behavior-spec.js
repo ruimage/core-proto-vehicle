@@ -157,7 +157,6 @@ describe('Truck', () => {
     });
 
     it('exists', () => {
-      console.dir(truck.drive)
       expect(truck.drive).toEqual(jasmine.any(Function));
     });
 
