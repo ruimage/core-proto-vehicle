@@ -1,8 +1,10 @@
 // Behavioral specs.
+const { Vehicle, Train, Truck } = require('../train-or-truck');
+
 describe('Vehicle', () => {
   describe('the constructor', () => {
     it('is a function', () => {
-      expect(Vehicle).toEqual(jasmine.any(Function));
+      expect(Vehicle).toEqual(expect.any(Function));
     });
 
     describe('when called', () => {
@@ -11,11 +13,11 @@ describe('Vehicle', () => {
         vehicle = new Vehicle('Polly');
       });
 
-      it('sets the driver', () => {
+      test('sets the driver', () => {
         expect(vehicle.driver).toEqual('Polly');
       });
 
-      it('sets the initial speed', () => {
+      test('sets the initial speed', () => {
         expect(vehicle.speed).toEqual(0);
       });
     });
@@ -28,15 +30,15 @@ describe('Vehicle', () => {
       vehicle = new Vehicle('Polly');
     });
 
-    it('exists', () => {
-      expect(vehicle.drive).toEqual(jasmine.any(Function));
+    test('exists', () => {
+      expect(vehicle.drive).toEqual(expect.any(Function));
     });
 
-    it('drives', () => {
+    test('drives', () => {
       expect(vehicle.drive(20)).toEqual('Polly driving at 20 kilometers per hour');
     });
 
-    it('sets the speed', () => {
+    test('sets the speed', () => {
       vehicle.drive(45);
       expect(vehicle.speed).toEqual(45);
     });
@@ -50,11 +52,11 @@ describe('Vehicle', () => {
       vehicle.drive(100);
     });
 
-    it('exists', () => {
-      expect(vehicle.stop).toEqual(jasmine.any(Function));
+    test('exists', () => {
+      expect(vehicle.stop).toEqual(expect.any(Function));
     });
 
-    it('stops', () => {
+    test('stops', () => {
       expect(vehicle.stop()).toEqual('Polly has stopped');
       expect(vehicle.speed).toEqual(0);
     });
@@ -63,8 +65,8 @@ describe('Vehicle', () => {
 
 describe('Train', () => {
   describe('the constructor', () => {
-    it('is a function', () => {
-      expect(Train).toEqual(jasmine.any(Function));
+    test('is a function', () => {
+      expect(Train).toEqual(expect.any(Function));
     });
 
     describe('when called', () => {
@@ -73,11 +75,11 @@ describe('Train', () => {
         train = new Train('Polly');
       });
 
-      it('sets the driver', () => {
+      test('sets the driver', () => {
         expect(train.driver).toEqual('Polly');
       });
 
-      it('sets the initial speed', () => {
+      test('sets the initial speed', () => {
         expect(train.speed).toEqual(0);
       });
     });
@@ -89,15 +91,15 @@ describe('Train', () => {
       train = new Train('Polly');
     });
 
-    it('exists', () => {
-      expect(train.drive).toEqual(jasmine.any(Function));
+    test('exists', () => {
+      expect(train.drive).toEqual(expect.any(Function));
     });
 
-    it('drives', () => {
+    test('drives', () => {
       expect(train.drive(20)).toEqual('Polly driving at 20 kilometers per hour');
     });
 
-    it('sets the speed', () => {
+    test('sets the speed', () => {
       train.drive(45);
       expect(train.speed).toEqual(45);
     });
@@ -111,22 +113,21 @@ describe('Train', () => {
       train.drive(100);
     });
 
-    it('exists', () => {
-      expect(train.stop).toEqual(jasmine.any(Function));
+    test('exists', () => {
+      expect(train.stop).toEqual(expect.any(Function));
     });
 
-    it('stops', () => {
+    test('stops', () => {
       expect(train.stop()).toEqual('Polly has stopped');
       expect(train.speed).toEqual(0);
     });
   });
 });
 
-
 describe('Truck', () => {
   describe('the constructor', () => {
-    it('is a function', () => {
-      expect(Truck).toEqual(jasmine.any(Function));
+    test('is a function', () => {
+      expect(Truck).toEqual(expect.any(Function));
     });
 
     describe('when called', () => {
@@ -135,15 +136,15 @@ describe('Truck', () => {
         truck = new Truck('Polly');
       });
 
-      it('sets the driver', () => {
+      test('sets the driver', () => {
         expect(truck.driver).toEqual('Polly');
       });
 
-      it('sets the initial speed', () => {
+      test('sets the initial speed', () => {
         expect(truck.speed).toEqual(0);
       });
 
-      it('sets the initial cargo load', () => {
+      test('sets the initial cargo load', () => {
         expect(truck.cargo).toEqual([]);
       });
     });
@@ -156,15 +157,15 @@ describe('Truck', () => {
       truck = new Truck('Polly');
     });
 
-    it('exists', () => {
-      expect(truck.drive).toEqual(jasmine.any(Function));
+    test('exists', () => {
+      expect(truck.drive).toEqual(expect.any(Function));
     });
 
-    it('drives', () => {
+    test('drives', () => {
       expect(truck.drive(20)).toEqual('Polly driving at 20 kilometers per hour');
     });
 
-    it('sets the speed', () => {
+    test('sets the speed', () => {
       truck.drive(45);
       expect(truck.speed).toEqual(45);
     });
@@ -178,11 +179,11 @@ describe('Truck', () => {
       truck.drive(100);
     });
 
-    it('exists', () => {
-      expect(truck.stop).toEqual(jasmine.any(Function));
+    test('exists', () => {
+      expect(truck.stop).toEqual(expect.any(Function));
     });
 
-    it('stops', () => {
+    test('stops', () => {
       expect(truck.stop()).toEqual('Polly has stopped');
       expect(truck.speed).toEqual(0);
     });
@@ -196,12 +197,11 @@ describe('Truck', () => {
       truck.loadCargo('test cargo');
     });
 
-    it('adds the cargo on the truck', () => {
-      
+    test('adds the cargo on the truck', () => {
       expect(truck.cargo).toEqual(['test cargo']);
     });
 
-    it('returns itself', () => {
+    test('returns itself', () => {
       expect(truck.loadCargo('test')).toEqual(truck);
     });
   });
@@ -215,11 +215,11 @@ describe('Truck', () => {
       unloadedCargo = truck.unloadCargo();
     });
 
-    it('returns the latest cargo', () => {
+    test('returns the latest cargo', () => {
       expect(unloadedCargo).toEqual('cargo 2');
     });
 
-    it('reduces the cargo load by 1', () => {
+    test('reduces the cargo load by 1', () => {
       expect(truck.cargo.length).toEqual(1);
     });
   });

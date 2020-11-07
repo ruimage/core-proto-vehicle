@@ -1,12 +1,14 @@
+const { Vehicle, Train, Truck } = require('../train-or-truck');
+
 describe('Vehicle prototype', () => {
-  it('has a drive method', () => {
-    expect(Vehicle.prototype.drive).toEqual(jasmine.any(Function));
+  test('has a drive method', () => {
+    expect(Vehicle.prototype.drive).toEqual(expect.any(Function));
   });
 });
 
 describe('Train', () => {
   describe('prototype constructor', () => {
-    it('is Train', () => {
+    test('is Train', () => {
       expect(Train.prototype.constructor).toEqual(Train);
     });
   });
@@ -17,7 +19,7 @@ describe('Train', () => {
       train = new Train('test');
     });
 
-    it('is the same function as Vehicle.prototype.drive', () => {
+    test('is the same function as Vehicle.prototype.drive', () => {
       expect(train.drive).toBe(Vehicle.prototype.drive);
     });
   });
@@ -25,7 +27,7 @@ describe('Train', () => {
 
 describe('Truck', () => {
   describe('prototype constructor', () => {
-    it('is Truck', () => {
+    test('is Truck', () => {
       expect(Truck.prototype.constructor).toEqual(Truck);
     });
   });
@@ -36,7 +38,7 @@ describe('Truck', () => {
       truck = new Truck('test');
     });
 
-    it('is the same function as Vehicle.prototype.drive', () => {
+    test('is the same function as Vehicle.prototype.drive', () => {
       expect(truck.drive).toBe(Vehicle.prototype.drive);
     });
   });
@@ -47,8 +49,8 @@ describe('Truck', () => {
       truck = new Truck('test');
     });
 
-    it('is on the prototype', () => {
-      expect(Truck.prototype.loadCargo).toEqual(jasmine.any(Function));
+    test('is on the prototype', () => {
+      expect(Truck.prototype.loadCargo).toEqual(expect.any(Function));
       expect(truck.loadCargo).toBe(Truck.prototype.loadCargo);
     });
   });
@@ -59,8 +61,8 @@ describe('Truck', () => {
       truck = new Truck('test');
     });
 
-    it('is on the prototype', () => {
-      expect(Truck.prototype.unloadCargo).toEqual(jasmine.any(Function));
+    test('is on the prototype', () => {
+      expect(Truck.prototype.unloadCargo).toEqual(expect.any(Function));
       expect(truck.unloadCargo).toBe(Truck.prototype.unloadCargo);
     });
   });
