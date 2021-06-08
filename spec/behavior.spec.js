@@ -211,12 +211,12 @@ describe('Truck', () => {
     let unloadedCargo;
     beforeEach(() => {
       truck = new Truck('Polly');
-      truck.cargo = ['cargo 1', 'cargo 2'];
+      truck.cargo = ['cargo 1', 'cargo 2', 'cargo 3', 'cargo 4'];
       unloadedCargo = truck.unloadCargo();
     });
 
     test('returns the latest cargo', () => {
-      expect(unloadedCargo).toEqual('cargo 2');
+      expect(unloadedCargo).toEqual('cargo 4');
     });
 
     test('reduces the cargo load by 1', () => {
