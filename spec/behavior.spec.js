@@ -35,7 +35,9 @@ describe('Vehicle', () => {
     });
 
     test('drives', () => {
-      expect(vehicle.drive(20)).toEqual('Polly driving at 20 kilometers per hour');
+      expect(vehicle.drive(20)).toEqual(
+        'Polly driving at 20 kilometers per hour'
+      );
     });
 
     test('sets the speed', () => {
@@ -96,7 +98,9 @@ describe('Train', () => {
     });
 
     test('drives', () => {
-      expect(train.drive(20)).toEqual('Polly driving at 20 kilometers per hour');
+      expect(train.drive(20)).toEqual(
+        'Polly driving at 20 kilometers per hour'
+      );
     });
 
     test('sets the speed', () => {
@@ -162,7 +166,9 @@ describe('Truck', () => {
     });
 
     test('drives', () => {
-      expect(truck.drive(20)).toEqual('Polly driving at 20 kilometers per hour');
+      expect(truck.drive(20)).toEqual(
+        'Polly driving at 20 kilometers per hour'
+      );
     });
 
     test('sets the speed', () => {
@@ -220,7 +226,7 @@ describe('Truck', () => {
     });
 
     test('reduces the cargo load by 1', () => {
-      expect(truck.cargo.length).toEqual(1);
+      expect(truck.cargo.length).toEqual(3);
     });
   });
 });
