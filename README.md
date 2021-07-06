@@ -4,12 +4,11 @@
 
 ### Release 0
 
-Итак, добро пожаловать в мир поездов и грузовиков.
-Сейчас тут все хаотично и каждый думает только о себе и своей функции-конструкторе. Пора навести порядок и оптимизировать процесс! 💪👮🤘
+So welcome to the world of trains and trucks! Right now everything is chaotic here and every person is only thinking about himself and his own constructor function. It's time to bring some order and optimize the process! 💪👮🤘
 
-Тебе надо познакомиться с файлом `train-or-truck` и с тестами в папке `spec`.
+You need to get familiar with the file `train-or-truck` and the tests in the folder `spec`.
 
-Возможно, ты уже заметил, что функция-конструктор `Vehicle` нигде не применяется. В то время как `Train` и `Truck` повторяют друг друга и перенагруженны свойствами и методами.
+You may have already noticed that the constructor function `Vehicle` doesn't apply anywhere. Whereas `Train` and `Truck` repeat each other and are overloaded with properties and methods.
 
 ```js
 function Vehicle(driver) {
@@ -24,17 +23,16 @@ function Vehicle(driver) {
 
 Время действовать✨
 
-В функции-конструкторе `Vehicle` тебе нужно назначить методы и свойства общие для `Train` и `Truck`. И, соответственно, убрать лишнее из `Train` и `Truck`.
+You are supposed to assign methods and properties common to `Train` and `Truck` in constructor function `Vehicle`. And accordingly remove unnecessary things from the `Train` and `Truck`.
 
 ### Release 2
 
-Супер!
-Теперь давай разберемся с наследованием.
-Тебе надо сделать наследование. Определись что должно быть в `prototype`, каким должен быть `constuctor`.
+Tough!
+Now let's deal with inheritance. You need to implementt inheritance. Define what should be in `prototype`, and what should be `constuctor`.
 
-> p.s. загляни в тесты
+> p.s. Take a look at the tests.
 
-> з.ы. не забудь   
-> **npm install** для установки зависимостей проекта   
-> **npm test для** запуска тестов
+> з.ы. Don't forget   
+> **npm install** to install project dependencies. 
+> **npm test для** to run tests.
 
