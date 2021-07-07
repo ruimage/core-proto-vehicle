@@ -17,7 +17,7 @@ function Vehicle(driver) {
 }
 ```
 
-Тебе нужно решить какие свойства и методы уникальны и нужны только в конкретной функции-конструкторе, а какие общие для `Train` и `Truck`.
+You need to decide which properties and methods are unique and are needed only in a specific constructor function, and which are common for `Train` and `Truck`.
 
 ### Release 1
 
@@ -32,7 +32,7 @@ Now let's deal with inheritance. You need to implementt inheritance. Define what
 
 > p.s. Take a look at the tests.
 
-> з.ы. Don't forget   
+> p.p.s Don't forget   
 > **npm install** to install project dependencies. 
 > **npm test для** to run tests.
 
