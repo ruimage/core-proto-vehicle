@@ -1,5 +1,5 @@
-// Функции-конструкторы Train и Truck имеют схожие свойства и поведение.
-// Перепишите их так, чтобы избавиться от дублирования одинаковых свойств и методов.
+// The Train and Truck constructor functions have similar properties and behavior.
+// Rewrite them to eliminate duplication of the same properties and methods.
 function Vehicle(driver) {
   this.driver = driver;
   this.speed = 0;
@@ -39,5 +39,5 @@ function Truck(driver) {
 Truck.prototype.unloadCargo = function () {
   return this.cargo;
 };
-// экспорт Vehicle, Train, Truc в файл с тестами
+// export Vehicle, Train, Truc to the file with tests
 module.exports = { Vehicle, Train, Truck };
