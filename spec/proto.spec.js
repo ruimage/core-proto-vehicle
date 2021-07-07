@@ -1,8 +1,12 @@
 const { Vehicle, Train, Truck } = require('../train-or-truck');
 
 describe('Vehicle prototype', () => {
+  let vehicle;
+  beforeEach(() => {
+    vehicle = new Vehicle('test');
+  });
   test('has a drive method', () => {
-    expect(Vehicle.prototype.drive).toEqual(expect.any(Function));
+    expect(vehicle.drive).toEqual(expect.any(Function));
   });
 });
 
@@ -15,12 +19,14 @@ describe('Train', () => {
 
   describe('.drive()', () => {
     let train;
+    let vehicle;
     beforeEach(() => {
       train = new Train('test');
+      vehicle = new Vehicle('test');
     });
 
     test('is the same function as Vehicle.prototype.drive', () => {
-      expect(train.drive).toBe(Vehicle.prototype.drive);
+      expect(train.drive()).toBe(vehicle.drive());
     });
   });
 });
@@ -34,12 +40,14 @@ describe('Truck', () => {
 
   describe('.drive()', () => {
     let truck;
+    let vehicle;
     beforeEach(() => {
       truck = new Truck('test');
+      vehicle = new Vehicle('test');
     });
 
     test('is the same function as Vehicle.prototype.drive', () => {
-      expect(truck.drive).toBe(Vehicle.prototype.drive);
+      expect(truck.drive()).toBe(vehicle.drive());
     });
   });
 
