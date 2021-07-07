@@ -21,7 +21,8 @@ You need to decide which properties and methods are unique and are needed only i
 
 ### Release 1
 
-Время действовать✨
+
+Time to act✨
 
 You are supposed to assign methods and properties common to `Train` and `Truck` in constructor function `Vehicle`. And accordingly remove unnecessary things from the `Train` and `Truck`.
 
