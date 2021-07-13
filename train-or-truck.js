@@ -32,7 +32,7 @@ function Truck(driver) {
     return `${this.driver} has stopped`;
   };
   this.loadCargo = function (cargo) {
-    return this.cargo;
+    return this;
   };
 }
 
@@ -41,3 +41,6 @@ Truck.prototype.unloadCargo = function () {
 };
 // export Vehicle, Train, Truc to the file with tests
 module.exports = { Vehicle, Train, Truck };
+
+// Функции-конструкторы Train и Truck имеют схожие свойства и поведение.
+// Перепишите их так, чтобы избавиться от дублирования одинаковых свойств и методов.

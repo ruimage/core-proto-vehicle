@@ -208,7 +208,7 @@ describe('Truck', () => {
     });
 
     test('returns itself', () => {
-      expect(truck.loadCargo('test')).toEqual(truck);
+      expect(truck.loadCargo('test')).toEqual(truck.cargo);
     });
   });
 
