@@ -4,7 +4,6 @@ function Vehicle(driver) {
   this.driver = driver;
   this.speed = 0;
 }
-
 function Train(driver) {
   this.driver = driver;
   this.type = 'passenger'; // 'passenger', 'freight', 'mail'
