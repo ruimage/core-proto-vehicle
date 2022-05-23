@@ -24,6 +24,7 @@ function Truck(driver) {
   this.cargo = [];
   this.loadCargo = function (cargo) {
     this.cargo.push(cargo);
+    return this.cargo;
   };
 
   this.unloadCargo = function () {
