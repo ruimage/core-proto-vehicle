@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-spacing */
 // Функции-конструкторы Train и Truck имеют схожие свойства и поведение.
 // Перепишите их так, чтобы избавиться от дублирования одинаковых свойств и методов.
 function Vehicle(driver) {
@@ -14,12 +15,12 @@ function Vehicle(driver) {
 }
 
 function Train(driver) {
-  Vehicle.call(this,driver);
+  Vehicle.call(this, driver);
   this.type = 'passenger'; // 'passenger', 'freight', 'mail'
 }
 
 function Truck(driver) {
-  Vehicle.call(this,driver);
+  Vehicle.call(this, driver);
   this.cargo = [];
   this.loadCargo = function (cargo) {
     this.cargo.push(cargo);
