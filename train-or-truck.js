@@ -14,17 +14,19 @@ function Vehicle(driver) {
 }
 
 function Train(driver) {
+  Vehicle.call(this,driver);
   this.type = 'passenger'; // 'passenger', 'freight', 'mail'
 }
 
 function Truck(driver) {
+  Vehicle.call(this,driver);
   this.cargo = [];
   this.loadCargo = function (cargo) {
-    return this;
+    this.cargo.push(cargo);
   };
 
   this.unloadCargo = function () {
-    return this.cargo;
+    return this.cargo.pop();
   };
 }
 
